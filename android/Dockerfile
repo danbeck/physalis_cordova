@@ -1,5 +1,5 @@
 # VERSION: 0.0.1
-FROM danielbeck/cordova:latest
+FROM danielbeck/cordova-base:latest
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
 # Environment variables
