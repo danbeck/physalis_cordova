@@ -15,9 +15,9 @@ RUN apt-get clean
 
 # Download libraries
 RUN cd /tmp && cordova create fakeapp && cd /tmp/fakeapp && cordova platform add ubuntu
-RUN click chroot -aarmhf -f ubuntu-sdk-14.04 create
 
 # This does not work, because "build" cannot be runned in the privileged mode.
+# RUN click chroot -aarmhf -f ubuntu-sdk-14.04 create
 # RUN cordova build 
 
 
