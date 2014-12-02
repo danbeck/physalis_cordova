@@ -1,14 +1,15 @@
 # VERSION: 0.0.1
-FROM danielbeck/cordova-base:latest
+FROM ubuntu:14.10
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
 # Environment variables
 
 RUN apt-get update
-RUN apt-get install -y vim click click-dev schroot
-#python-software-properties software-properties-common 
-
-# RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y vim click click-dev schroot python-software-properties software-properties-common 
+RUN add-apt-repository ppa:cordova-ubuntu/ppa
+RUN apt-get update -y
+RUN apt-get install cordova-cli -y
+#RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get autoremove -y
 RUN apt-get clean
 
@@ -17,12 +18,12 @@ RUN apt-get clean
 RUN cd /tmp && cordova create fakeapp && cd /tmp/fakeapp && cordova platform add ubuntu
 
 # This does not work, because "build" cannot be runned in the privileged mode.
-# RUN click chroot -aarmhf -f ubuntu-sdk-14.04 create
-# RUN cordova build 
+#RUN cd /root && click chroot -aarmhf -f ubuntu-sdk-14.10 create
+#RUN cd /tmp/fakeapp && cordova build 
 
 
 # Delete fake application, since it isn't needed anymore
-RUN cd ~/ && rm -rf /tmp/fakeapp
+#RUN cd ~/ && rm -rf /tmp/fakeapp
 
 VOLUME ["/data"]
 WORKDIR /data
