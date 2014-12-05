@@ -19,7 +19,8 @@ RUN cd /tmp && cordova create fakeapp && cd /tmp/fakeapp && cordova platform add
 
 # This does not work, because "build" cannot be runned in the privileged mode.
 #RUN cd /root && click chroot -aarmhf -f ubuntu-sdk-14.10 create
-#RUN cd /tmp/fakeapp && cordova build 
+#RUN click chroot -aarmhf -f ubuntu-sdk-14.10 install libicu-dev:armhf  qtfeedback5-dev:armhf qtpim5-dev:armhf qtsystems5-dev:armhf
+#RUN cd /tmp/fakeapp && cordova build --device 
 
 
 # Delete fake application, since it isn't needed anymore
