@@ -2,13 +2,6 @@
 FROM ubuntu:14.10
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
-# Environment variables
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-
-# Install java. Needed for the the play webservice
-RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk wget
-
 RUN apt-get update
 RUN apt-get install -y vim click click-dev schroot python-software-properties software-properties-common 
 RUN add-apt-repository ppa:cordova-ubuntu/ppa
