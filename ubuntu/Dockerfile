@@ -1,4 +1,4 @@
-# VERSION: 0.0.2
+# VERSION: 0.0.3
 FROM ubuntu:14.10
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
