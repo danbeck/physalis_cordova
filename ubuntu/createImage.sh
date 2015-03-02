@@ -14,4 +14,5 @@ udo docker run -t -i --privileged=true danielbeck/cordova-ubuntu /bin/bash
 #sudo docker login
 #sudo docker push danielbeck/cordova-ubuntu
 #sudo docker run -t -i training/sinatra /bin/bash
-#sudo docker commit -m "Added json gem" -a "Kate Smith" 0b2616b0e5a8 ouruser/sinatra:v2
+#sudo docker commit -m "Executed chroot" -a "Daniel B d8425ef1966746ef117216de3862cc94cfc0ff389a1689ce109b7acbc8e85b6f danielbeck/ubuntu-inwork
+
