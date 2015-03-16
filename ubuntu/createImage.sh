@@ -13,6 +13,9 @@ udo docker run -t -i --privileged=true danielbeck/cordova-ubuntu /bin/bash
 
 #sudo docker login
 #sudo docker push danielbeck/cordova-ubuntu
-#sudo docker run -t -i training/sinatra /bin/bash
-#sudo docker commit -m "Executed chroot" -a "Daniel B d8425ef1966746ef117216de3862cc94cfc0ff389a1689ce109b7acbc8e85b6f danielbeck/ubuntu-inwork
+#sudo docker run -t -i danielbeck/cordova-ubuntu /bin/bash
+#sudo docker commit -m "Executed chroot" -a "Daniel Beck" d8425ef1966746ef117216de3862cc94cfc0ff389a1689ce109b7acbc8e85b6f danielbeck/ubuntu-inwork
 
+#USAGE:
+#sudo docker run -t -i danielbeck/cordova-ubuntu  create testapp
+# docker run -rm --privileged  -t -i -v /home/daniel/PhysalisTest/green-mahjong/GreenMahjong/:/data -v /home/daniel:/tmp  danielbeck/cordova-ubuntu /bin/bash
