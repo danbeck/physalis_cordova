@@ -2,11 +2,11 @@
 FROM ubuntu:14.04
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
+RUN apt-get install -y vim click click-dev schroot python-software-properties software-properties-common 
 RUN add-apt-repository ppa:cordova-ubuntu/ppa
 RUN add-apt-repository ppa:ubuntu-sdk-team/ppa
 RUN apt-get update -y
 RUN apt-get upgrade -y
-RUN apt-get install -y vim click click-dev schroot python-software-properties software-properties-common 
 RUN apt-get install cordova-cli -y
 #RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get autoremove -y
