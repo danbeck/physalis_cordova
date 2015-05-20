@@ -2,7 +2,7 @@
 sudo docker build -t danielbeck/cordova-ubuntu .
 
 # 2. Starts the image in the priviledged modus. Executes the shell in interactive mode. 
-udo docker run -t -i --privileged=true danielbeck/cordova-ubuntu /bin/bash
+sudo docker run -t -i --privileged=true danielbeck/cordova-ubuntu /bin/bash
 
 # 3. Execute the following commands in the shell:
 #cd /tmp && cordova create fakeapp && cd /tmp/fakeapp && cordova platform add ubuntu
@@ -19,3 +19,4 @@ udo docker run -t -i --privileged=true danielbeck/cordova-ubuntu /bin/bash
 #USAGE:
 #sudo docker run -t -i danielbeck/cordova-ubuntu  create testapp
 # docker run -rm --privileged  -t -i -v /home/daniel/PhysalisTest/green-mahjong/GreenMahjong/:/data -v /home/daniel:/tmp  danielbeck/cordova-ubuntu /bin/bash
+
