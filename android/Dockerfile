@@ -1,5 +1,5 @@
 # VERSION: 0.0.1
-FROM danielbeck/cordova-base:latest
+FROM danielbeck/cordova:5.0.0
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
 # Environment variables
@@ -14,7 +14,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANT_HOME
 
  
 RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk wget
+RUN apt-get install -y openjdk-8-jdk wget git
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get autoremove -y
 RUN apt-get clean
