@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV CORDOVA_VERSION 4.2.0
 
 RUN apt-get update
-RUN apt-get install -y cocoonjs libncurses5 lib32stdc++6 lib32z1 
+RUN apt-get install -y nodejs libncurses5 lib32stdc++6 lib32z1 
 
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get autoremove -y
