@@ -1,5 +1,5 @@
 # VERSION: 0.0.1
-FROM danielbeck/cordova:5.0.0
+FROM ubuntu:14.10
 MAINTAINER Daniel Beck "d.danielbeck@googlemail.com"
 
 # Environment variables
